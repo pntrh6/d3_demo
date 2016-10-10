@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+   
+	
+<script type="text/javascript">
+
+
+    var svg = d3.select('body').append('svg')
+                .attr('width',800)
+                .attr('height',600); 
+
+
+    // var one=[,'green','red','yellow','pink','black'];
+    // var x=['2','10','30','24','55'];
+    // var x=['10','36','44','38','65'];
+    // var r=['10','15','20','30','25'];
+
+
+    var one=[['green',2,100,100], ['red',10,360,150] , ['yellow',30,440,200,] ,['pink',24,380,300] ,['steelblue',200,200,600]];
+
+    svg.selectAll('circle').data(one).enter().append('circle')
+       .attr('cx',function(d,i){return d[2]})
+       .attr('cy',function(d,i){return d[3]})
+       .attr('r',function(d,i){return d[1]})
+       .attr('fill',function(d,i){return d[0]});   
+
+// ---------------------------------------------------------------------- 以上的是圈圈 以下的是圖表
+
+    // var svg01= d3.select('body').append('svg')
+    //              .attr('width',800)
+    //              .attr('height',600); 
+
+
+
+    // var data=[30,22,65,45,90,12,77];
+
+
+    // d3.select('body').selectAll('p').data(data).enter().append('p')
+    //      .text(function(d){ return d})
+    //      .style('background','#fa0')
+    //      .style('padding','10px 20px')
+    //      .style('margin','20px')    
+    //      .style('width',function(d){ return d+'px' })
+    //      .style('color',function(d){ if(d<60){return 'red'}}); 
+    
+
+
+// var data2 = [30,63,55,67,80,99,42];
+// d3.select('body').selectAll('p').data(data2).enter()
+//     .append('p').text(function(d){
+//         return d;
+//     }).style({
+//         'color':function(d){
+//             if(d<60){
+//                 return '#f00'
+//             }
+//         },
+//         'width':function(d){
+//             return d+'px'
+//         },
+//         'background-color':'pink',
+//         'margin':'10px 0',
+//         'padding':'5px 10px'
+//     });
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
